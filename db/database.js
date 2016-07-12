@@ -1,7 +1,13 @@
 var mongoose = require('mongoose');
 
-var connectionString = process.env.DB;
-console.log(process.env.DB);
+var connectionString = "mongodb://tempus:tempus@ds031948.mlab.com:31948/tempus";
+// var connectionString = process.env.DB;
+
+// console.log(process.env.DB);
+// mongodb://tempus:tempus@ds031948.mlab.com:31948/tempus
+// mongodb://tempusuiassignment:password1@ds031948.mlab.com:31948/tempus
+
+
 
 mongoose.connect(connectionString);
 
