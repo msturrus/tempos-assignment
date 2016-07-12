@@ -27,9 +27,9 @@ router.get('/', function(req, res, next) {
         var currentUser = user.username;
         console.log("Welcome to the site, "+ currentUser);
         if (user.isDoctor) {
-          res.redirect('/doctor');
+          res.redirect('/users/doctor');
         } else {
-          res.redirect('/patient');
+          res.redirect('/users/patient');
         }
       } else {
           console.log("The username or password you entered was incorrect.");
