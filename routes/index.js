@@ -27,7 +27,13 @@ router.get('/', function(req, res, next) {
   if (req.session.loggedIn === true) {
     console.log("You're already logged in!");
     req.session.accountMessage = "You're already logged in!";
-    res.redirect('/');
+    User.findOne({ _id: req.session.currentUserId }, function(err, user) {
+      if (user.isDoctor) {
+        res.redirect('/users/doctor');
+      } else {
+        res.redirect('/users/patient');
+      }
+    })
   } else res.render('index', { title: 'Tempus'});
 }) // ------------------ POST login --------------------------
 .post('/login', function(req, res, next) {
