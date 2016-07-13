@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Tempus', accountMessage: req.session.accountMessage });
 })
 
+// GET logout
 .get('/logout', function(req, res, next) {
   if (req.session.loggedIn === true) {
     req.session.loggedIn = null;

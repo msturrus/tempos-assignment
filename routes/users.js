@@ -10,10 +10,12 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+// redirect to login
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Tempus' });
 })
 
+// Renders doctor page with 1 patient's info
 router.get('/doctor', function(req, res, next) {
   var name = req.session.currentName;
   var patient = {};
@@ -28,6 +30,7 @@ router.get('/doctor', function(req, res, next) {
 
 })
 
+// Renders patient page with account message
 router.get('/patient', function(req, res, next) {
   res.render('patient', { title: 'Tempus Patient Portal', accountMessage: "Welcome " + req.session.currentName + ", please upload a file"});
 })
@@ -38,6 +41,8 @@ router.use(express.static(path.join(__dirname, 'public')));
 //   res.sendFile(path.join(__dirname, 'views/index.html'));
 // });
 
+
+// VVVVVVV Route used for file upload POST, see /javascripts/uploads.js
 router.post('/uploads', function(req, res){
 
   // create an incoming form object
