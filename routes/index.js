@@ -52,8 +52,9 @@ router.get('/', function(req, res, next) {
           res.redirect('/login');
       }
     } else {
+        req.session.accountMessage = "Sorry, that username was not found."
         console.log("User doesn't exist.");
-        res.redirect('/register');
+        res.redirect('/');
       }
   });
 })

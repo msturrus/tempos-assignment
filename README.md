@@ -1,5 +1,8 @@
 # tempus-ui-assignment
 
+npm start
+localhost:3000
+
 Login info:
 
 
