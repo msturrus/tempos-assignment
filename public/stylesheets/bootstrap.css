@@ -6905,3 +6905,7 @@ textarea {
   top: 40px;
   right: 10px;
 }
+.upload-font {
+  color: #2B2B2B;
+  text-align: left;
+}

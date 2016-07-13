@@ -20,9 +20,17 @@ require('./db/database.js');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+// Handlebars.registerHelper('navbar_if', function(a,b) {
+//   if(req.session.loggedIn === true) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

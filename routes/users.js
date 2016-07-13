@@ -3,6 +3,7 @@ var router = express.Router();
 var formidable = require('formidable');
 var fs = require('fs');
 var path = require('path');
+var User = require('../models/user');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -14,11 +15,21 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/doctor', function(req, res, next) {
-  res.render('doctor', { title: 'Tempus Doctor Portal' });
+  var name = req.session.currentName;
+  var patient = {};
+  User.findOne({ username: 'patient1' }, function(err, user) {
+    console.log(user);
+    patient = user;
+    res.render('doctor', { name: name, patient: patient, patientName: patient.name, patientAge: patient.age, patientAddress: patient.address, title: 'Tempus Doctor Portal' });
+  });
+  console.log("===========================")
+  console.log(patient);
+  console.log("===========================")
+
 })
 
 router.get('/patient', function(req, res, next) {
-  res.render('patient', { title: 'Tempus Patient Portal' });
+  res.render('patient', { title: 'Tempus Patient Portal', accountMessage: "Welcome " + req.session.currentName + ", please upload a file"});
 })
 
 router.use(express.static(path.join(__dirname, 'public')));

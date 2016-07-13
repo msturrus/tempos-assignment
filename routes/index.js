@@ -5,13 +5,27 @@ var User = require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tempus' });
+  res.render('index', { title: 'Tempus', accountMessage: req.session.accountMessage });
+})
+
+.get('/logout', function(req, res, next) {
+  if (req.session.loggedIn === true) {
+    req.session.loggedIn = null;
+    req.session.currentUserId = null;
+    req.session.currentUser = null;
+    req.session.accountMessage = "You have been logged out";
+    console.log('You have been logged out.');
+    res.redirect('/');
+  } else {
+    res.redirect('/');
+  }
 })
 
 // ------------------ GET login ---------------------------
 .get('/login', function(req, res, next) {
   if (req.session.loggedIn === true) {
     console.log("You're already logged in!");
+    req.session.accountMessage = "You're already logged in!";
     res.redirect('/');
   } else res.render('index', { title: 'Tempus'});
 }) // ------------------ POST login --------------------------
@@ -24,6 +38,7 @@ router.get('/', function(req, res, next) {
         req.session.loggedIn = true;
         req.session.currentUserId = user._id;
         req.session.currentUser = user.username;
+        req.session.currentName = user.name;
         var currentUser = user.username;
         console.log("Welcome to the site, "+ currentUser);
         if (user.isDoctor) {
