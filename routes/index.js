@@ -54,8 +54,9 @@ router.get('/', function(req, res, next) {
           res.redirect('/users/patient');
         }
       } else {
+          req.session.accountMessage = "That is an incorrect password for " + user.username + ", please try again";
           console.log("The username or password you entered was incorrect.");
-          res.redirect('/login');
+          res.redirect('/');
       }
     } else {
         req.session.accountMessage = "Sorry, that username was not found."

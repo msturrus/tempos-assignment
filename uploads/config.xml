@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- graphic options -->
+  <fullscreen>false</fullscreen>
+  <borderless>true</borderless>
+  <antialiasing>0</antialiasing>
+  <vsync>false</vsync>
+  <gamma>1.00</gamma>
+  <capturehq>false</capturehq>
+  <gfxquality>2</gfxquality>
+  <!-- medium gfx preset -->
+  <shaderquality>1</shaderquality>
+  <shadows>0</shadows>
+  <softshadows>false</softshadows>
+  <ssao>0</ssao>
+  <glow>1</glow>
+  <lodfactor>0.25</lodfactor>
+  <viewdistance>0.30</viewdistance>
+  <effectdistance>0.30</effectdistance>
+  <distortion>false</distortion>
+  <disableradar>false</disableradar>
+  <radarquality>1</radarquality>
+  <em_cutscene>false</em_cutscene>
+  <!-- sound options -->
+  <nosound>false</nosound>
+  <volumetotal>1.00</volumetotal>
+  <volumemusic>0.75</volumemusic>
+  <volumevoice>1.00</volumevoice>
+  <volumeambient>1.00</volumeambient>
+  <volumeui>1.00</volumeui>
+  <volumeeffects>1.00</volumeeffects>
+  <!-- game options -->
+  <subtitles>true</subtitles>
+  <autosave>true</autosave>
+  <autoroll>true</autoroll>
+  <toggleboost>false</toggleboost>
+  <togglemouselook>false</togglemouselook>
+  <rumbleintensity>1.00</rumbleintensity>
+  <aimassist>1</aimassist>
+  <collisionassist>true</collisionassist>
+  <eventmonitordetails>true</eventmonitordetails>
+  <controlmodemessages>true</controlmodemessages>
+  <radarmode>false</radarmode>
+  <fullscreendetailmonitor>true</fullscreendetailmonitor>
+  <legacymainmenu>false</legacymainmenu>
+  <stopshipinmenu>true</stopshipinmenu>
+  <nonsquadshipsfortradeoffers>true</nonsquadshipsfortradeoffers>
+  <mouseovertext>true</mouseovertext>
+  <!-- input options -->
+  <confinemouse>false</confinemouse>
+  <gamepadmode>1</gamepadmode>
+  <!-- privacy options -->
+  <sendcrashreports>true</sendcrashreports>
+  <!-- DEPRECATED OPTIONS - now in inputmap.xml -->
+  <invert_steering_pitch>false</invert_steering_pitch>
+  <invert_steering_roll>true</invert_steering_roll>
+  <invert_steering_yaw>false</invert_steering_yaw>
+  <invert_throttle>false</invert_throttle>
+  <invert_strafe_left_right>false</invert_strafe_left_right>
+  <invert_strafe_up_down>false</invert_strafe_up_down>
+  <invert_fp_yaw>false</invert_fp_yaw>
+  <invert_fp_pitch>false</invert_fp_pitch>
+  <invert_fp_walk>false</invert_fp_walk>
+  <invert_fp_strafe>false</invert_fp_strafe>
+  <invert_fp_mouse_yaw>false</invert_fp_mouse_yaw>
+  <invert_fp_mouse_pitch>false</invert_fp_mouse_pitch>
+  <sensitivity_fp_yaw>0.50</sensitivity_fp_yaw>
+  <sensitivity_fp_pitch>0.50</sensitivity_fp_pitch>
+  <sensitivity_fp_mouse_yaw>0.50</sensitivity_fp_mouse_yaw>
+  <sensitivity_fp_mouse_pitch>0.50</sensitivity_fp_mouse_pitch>
+  <deadzone>25</deadzone>
+  <fxaa>0</fxaa>
+</root>

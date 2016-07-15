@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uidata version="1">
+  <data environment="detailmonitor"/>
+  <data environment="fullscreen">
+__CORE_GAMEOPTIONS_RESTOREINFO = {}
+</data>
+  <data environment="fullscreen2">
+__CORE_DEBUGLOG_LOG = {
+[&quot;lastClear&quot;]={
+[&quot;minor&quot;]=0.000000,
+[&quot;major&quot;]=4.000000,},
+[&quot;version&quot;]=4.000000,
+[&quot;data&quot;]={
+[2.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: FileIORequest::WaitForResult() Failed './etc\\xml\\catalog' with 3&quot;,
+[&quot;timestamp&quot;]=1463352035.000000,},
+[5.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: Cannot match path '/ships/ship[@id='te_xl_pirate_destroyer']/drop' in patch file 'extensions\\terratechs_improvedloot\\libraries\\ships'. Skipping node.&quot;,
+[&quot;timestamp&quot;]=1463352103.000000,},
+[12.000000]={
+[&quot;gamestart&quot;]=2.000000,
+[&quot;message&quot;]=&quot;Error: HeapTracker full - Please increase AK_MEMORY_HEAPTRACKINGSIZE to track all allocation and tune your pools to avoid hitting the heap.&quot;,
+[&quot;timestamp&quot;]=1463352209.000000,},
+[11.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: [Video.Start] Failed to start movie -2&quot;,
+[&quot;timestamp&quot;]=1463352130.000000,},
+[4.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: Cannot match path '/soundlibrary/sound[@id='notification_hint']' in patch file 'extensions\\litauen_showbalance\\libraries\\sound_library'. Skipping node.&quot;,
+[&quot;timestamp&quot;]=1463352102.000000,},
+[10.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: Blur(maincolorhdr_2x, maincolorhdr_2x_swap, xu_blur_tap4) shader Y not yet loaded (this is fine during launch or shader reload). @Timon&quot;,
+[&quot;timestamp&quot;]=1463352106.000000,},
+[9.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: Blur(maincolorhdr_2x, maincolorhdr_2x_swap, xu_blur_tap4) shader X not yet loaded (this is fine during launch or shader reload). @Timon&quot;,
+[&quot;timestamp&quot;]=1463352105.000000,},
+[8.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: Attempted to add keyframes out of order; keyframes must be specified in increasing time order. Keyframe will be dropped!&quot;,
+[&quot;timestamp&quot;]=1463352103.000000,},
+[3.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: XLib::XMLInputOpenCallback(): Failed to open the file: etc/xml/catalog&quot;,
+[&quot;timestamp&quot;]=1463352035.000000,},
+[7.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: [Movie.LoadFormat] File videos/logo_publisher.mkv: avformat_open_input = -2 'No such file or directory'&quot;,
+[&quot;timestamp&quot;]=1463352103.000000,},
+[1.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: File I/O: Could not find file './etc\\xml\\catalog'&quot;,
+[&quot;timestamp&quot;]=1463352035.000000,},
+[6.000000]={
+[&quot;gamestart&quot;]=1.000000,
+[&quot;message&quot;]=&quot;Error: Cannot match path '/unlocks/mission[@id='testmission2']/conditions/distance' in patch file 'extensions\\ise comfortable edition\\libraries\\unlocks'. Skipping node.&quot;,
+[&quot;timestamp&quot;]=1463352103.000000,},},}
+</data>
+</uidata>
