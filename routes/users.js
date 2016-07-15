@@ -36,13 +36,10 @@ router.get('/patient', function(req, res, next) {
 })
 
 router.use(express.static(path.join(__dirname, 'public')));
-//
-// router.get('/', function(req, res){
-//   res.sendFile(path.join(__dirname, 'views/index.html'));
-// });
 
 
-// VVVVVVV Route used for file upload POST, see /javascripts/uploads.js
+
+// VVVVVVV Route used for file upload POST, see public/javascripts/uploads.js
 router.post('/uploads', function(req, res){
 
   // create an incoming form object
@@ -52,7 +49,6 @@ router.post('/uploads', function(req, res){
   form.multiples = true;
 
   // store all uploads in the /uploads directory
-  // form.uploadDir = path.join(__dirname, '/uploads');
   form.uploadDir = './uploads';
 
 
