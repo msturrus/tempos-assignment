@@ -6914,3 +6914,6 @@ textarea {
   margin-right: auto;
   float: none !important;
 }
+#upload-input {
+  display: none;
+}
