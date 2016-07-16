@@ -6754,7 +6754,7 @@ p {
   padding-top: 5px;
 }
 .center {
-  text-align: center;
+  text-align: center !important;
 }
 .reduce {
   font-size: 16px;
@@ -6908,4 +6908,9 @@ textarea {
 .upload-font {
   color: #2B2B2B;
   text-align: left;
+}
+.center-div {
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
 }

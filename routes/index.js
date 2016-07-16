@@ -27,13 +27,7 @@ router.get('/', function(req, res, next) {
   if (req.session.loggedIn === true) {
     console.log("You're already logged in!");
     req.session.accountMessage = "You're already logged in!";
-    User.findOne({ _id: req.session.currentUserId }, function(err, user) {
-      if (user.isDoctor) {
-        res.redirect('/users/doctor');
-      } else {
-        res.redirect('/users/patient');
-      }
-    })
+    routeDoctor(req, res);
   } else res.render('index', { title: 'Tempus'});
 }) // ------------------ POST login --------------------------
 .post('/login', function(req, res, next) {
@@ -50,11 +44,7 @@ router.get('/', function(req, res, next) {
         req.session.isPatient = user.isPatient;
         var currentUser = user.username;
         console.log("Welcome to the site, "+ currentUser);
-        if (user.isDoctor) {
-          res.redirect('/users/doctor');
-        } else {
-          res.redirect('/users/patient');
-        }
+        routeDoctor(req, res);
       } else {
           req.session.accountMessage = "That is an incorrect password for " + user.username + ", please try again";
           console.log("The username or password you entered was incorrect.");
@@ -67,5 +57,17 @@ router.get('/', function(req, res, next) {
       }
   });
 })
+
+var routeDoctor = function(req, res){
+  User.findOne({ _id: req.session.currentUserId }, function(err, user) {
+    if (user.isDoctor && user.isPatient) {
+      res.redirect('/users');
+    } else if (user.isDoctor) {
+      res.redirect('/users/doctor');
+    } else {
+      res.redirect('/users/patient');
+    }
+  })
+};
 
 module.exports = router;

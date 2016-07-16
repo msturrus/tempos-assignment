@@ -7,7 +7,7 @@ var User = require('../models/user');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('doctor-patient');
 });
 
 // redirect to login
