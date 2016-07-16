@@ -1,4 +1,4 @@
-# tempus-ui-assignment - Michael Sturrus
+# Tempus UI Assignment - Michael Sturrus
 
 ## Installation and Running:
 
