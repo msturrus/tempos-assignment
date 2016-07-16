@@ -17,22 +17,28 @@ router.get('/', function(req, res, next) {
 
 // Renders doctor page with 1 patient's info
 router.get('/doctor', function(req, res, next) {
-  var name = req.session.currentName;
-  var patient = {};
-  User.findOne({ username: 'patient1' }, function(err, user) {
-    console.log(user);
-    patient = user;
-    res.render('doctor', { name: name, patient: patient, patientName: patient.name, patientAge: patient.age, patientAddress: patient.address, title: 'Tempus Doctor Portal' });
-  });
-  console.log("===========================")
-  console.log(patient);
-  console.log("===========================")
-
+  if (req.session.isDoctor){
+    var name = req.session.currentName;
+    var patient = {};
+    User.findOne({ username: 'patient1' }, function(err, user) {
+      console.log(user);
+      patient = user;
+      res.render('doctor', { name: name, patient: patient, patientName: patient.name, patientAge: patient.age, patientAddress: patient.address, title: 'Tempus Doctor Portal' });
+    });
+  } else {
+    req.session.accountMessage = "We're sorry, only doctors can view that route"
+    res.redirect('../')
+  }
 })
 
 // Renders patient page with account message
 router.get('/patient', function(req, res, next) {
-  res.render('patient', { title: 'Tempus Patient Portal', accountMessage: "Welcome " + req.session.currentName + ", please upload a file"});
+  if (req.session.isPatient){
+    res.render('patient', { title: 'Tempus Patient Portal', accountMessage: "Welcome " + req.session.currentName + ", please upload a file"});
+  } else {
+    req.session.accountMessage = "We're sorry, only patients can view that route"
+    res.redirect('../')
+  }
 })
 
 router.use(express.static(path.join(__dirname, 'public')));

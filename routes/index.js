@@ -46,6 +46,8 @@ router.get('/', function(req, res, next) {
         req.session.currentUserId = user._id;
         req.session.currentUser = user.username;
         req.session.currentName = user.name;
+        req.session.isDoctor = user.isDoctor;
+        req.session.isPatient = user.isPatient;
         var currentUser = user.username;
         console.log("Welcome to the site, "+ currentUser);
         if (user.isDoctor) {
