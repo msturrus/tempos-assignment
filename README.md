@@ -1,17 +1,21 @@
-# tempus-ui-assignment
+# tempus-ui-assignment - Michael Sturrus
 
-npm install
-npm start
-localhost:3000
+## Installation and Running:
 
-Login info:
+$ npm install
+
+$ npm start
+
+Navigate to localhost:3000
+
+## Login info:
 
 
 Patient usernames: patient1, patient2
 
 Doctor usernames: doctor1, doctor2
 
-A doctor who is also a patient username: doctorpatient
+A doctor who happens to also a be a patient: doctorpatient
 
 all passwords: password1
 
